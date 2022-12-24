@@ -26,7 +26,7 @@ jobs:
           sudo python3 -m pip install wheel setuptools
       - name: clone-dumper
         run: |
-          git clone -b main --depth=1 --single-branch https://github.com/SakuraNotStupid/phoenix_firmware_dumper
+          git clone -b main --depth=1 --single-branch https://github.com/DroidDumps/phoenix_firmware_dumper
           sudo chmod -R 777 phoenix_firmware_dumper
       - name: write-dumper-cfgs
         run: |
