@@ -27,7 +27,7 @@ jobs:
       - name: clone-dumper
         run: |
           git clone -b main --depth=1 --single-branch https://github.com/DumprX/DumprX
-          sudo chmod -R 777 phoenix_firmware_dumper
+          sudo chmod -R 777 DumprX
       - name: write-dumper-cfgs
         run: |
           cd phoenix_firmware_dumper
@@ -35,9 +35,9 @@ jobs:
           echo "${{ secrets.GH_TOKEN }}" >> ".github_token"
       - name: setup-dumper
         run: |
-          cd phoenix_firmware_dumper
+          cd DumprX
           sudo bash setup.sh
       - name: dump
         run: |
-          cd phoenix_firmware_dumper
+          cd DumprX
           sudo bash dumper.sh "${{ github.event.inputs.target_url }}"
