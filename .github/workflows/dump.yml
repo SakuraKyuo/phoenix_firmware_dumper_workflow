@@ -30,7 +30,7 @@ jobs:
           sudo chmod -R 777 DumprX
       - name: write-dumper-cfgs
         run: |
-          cd phoenix_firmware_dumper
+          cd DumprX
           echo "BaCO3Team" >> ".github_orgname"
           echo "${{ secrets.GH_TOKEN }}" >> ".github_token"
       - name: setup-dumper
