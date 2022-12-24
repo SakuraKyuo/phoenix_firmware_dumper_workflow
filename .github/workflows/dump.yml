@@ -40,4 +40,4 @@ jobs:
       - name: dump
         run: |
           cd phoenix_firmware_dumper
-          sudo bash dumper.sh ${{ github.event.inputs.target_url }}
+          sudo bash dumper.sh "${{ github.event.inputs.target_url }}"
