@@ -40,6 +40,4 @@ jobs:
       - name: dump
         run: |
           cd phoenix_firmware_dumper
-          sudo echo "47.74.196.250 bigota.d.miui.com" >>/etc/hosts
-          sudo echo "47.74.196.250 hugeota.d.miui.com" >>/etc/hosts
           sudo bash dumper.sh "${{ github.event.inputs.target_url }}"
