@@ -24,6 +24,9 @@ jobs:
       - name: install-required-py3-pkgs
         run: |
           sudo python3 -m pip install wheel setuptools
+      - name: Fuck MIUI CDN
+        run: |
+          sudo bash miui.sh
       - name: clone-dumper
         run: |
           git clone -b main --depth=1 --single-branch https://github.com/${{ secrets.GIT_IDENTITY_USER_NAME}}/phoenix_firmware_dumper
